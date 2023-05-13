@@ -1,0 +1,55 @@
+.back{
+    display: flex;
+    justify-content: center;
+}
+
+.main-container{
+    display: flex;
+    min-height: 100vh;
+    width: 80%;
+    background-color: rgb(187, 187, 189);
+}
+
+.lista-itens{
+    width: 70%;
+    padding: 50px 10px;
+}
+
+table{
+    width: 100%;
+    border-style: solid;
+}
+
+td{
+    border-style: solid;
+}
+
+.charge{
+    display: flex;
+    justify-content: center;
+    width: 20%;
+
+}
+
+.container-charge h1{
+    width: 100%;
+    font-size: 40px;
+}
+
+.preco-total{
+    display: block;
+    justify-content: center;
+}
+
+.container-charge button{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-style: solid;
+    border-width: 0px;
+    border-radius: 5px;
+    color: white;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
