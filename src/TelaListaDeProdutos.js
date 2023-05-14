@@ -2,6 +2,7 @@ import { Component} from "react"
 import "./Lista.css"
 import axios from "axios"
 import { Link } from "react-router-dom"
+import { AcessToken } from "./token"
 
 var editing = false;
 
@@ -25,7 +26,6 @@ const toggleCrud = () =>{
     }
     else if(editing==true){
         editing = false
-        window.location.reload()
         cont[0].style.display = "none"
         for(let i of editar){
             i.style.display = "none"
@@ -140,6 +140,7 @@ class Lista extends Component{
             method:"post",
             headers:{
                 "Content-Type":"application/json; charset=UTF-8",
+                "Authorization":AcessToken.token
             },
             url:"http://localhost:8080/api/produto",
             data:{
@@ -160,6 +161,7 @@ class Lista extends Component{
             method:"delete",
             headers:{
                 "Content-Type":"application/json; charset=UTF-8",
+                "Authorization":AcessToken.token
             },
             url:"http://localhost:8080/api/produto/"+id,
         })
@@ -176,6 +178,7 @@ class Lista extends Component{
             method:"put",
             headers:{
                 "Content-Type":"application/json; charset=UTF-8",
+                "Authorization":AcessToken.token
             },
             url:"http://localhost:8080/api/produto",
             data:{

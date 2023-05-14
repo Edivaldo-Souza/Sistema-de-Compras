@@ -2,6 +2,7 @@ import { Component, useEffect, useState } from "react"
 import "./Carrinho.css"
 import { Link, useLocation } from "react-router-dom"
 import axios from "axios"
+import { AcessToken } from "./token"
 
 class Produtos extends Component{
     render(){
@@ -43,6 +44,7 @@ function Carrinho(){
                 method:"post",
                 headers:{
                     "Content-Type":"application/json; charset=UTF-8",
+                    "Authorization":AcessToken.token
                 },
                 url:"http://localhost:8080/api/saldo",
                 data:{

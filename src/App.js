@@ -1,9 +1,9 @@
 
 import './App.css';
 import CadastroUsuario from './CadastroUsuario';
-import Carrinho from './Carrinho';
-import MainPage from './MainPage';
-import Login from './Login';
+import Carrinho from './TelaCarrinhoDeCompras';
+import MainPage from './TelaPrincipal';
+import Login from './TelaDeLogin';
 import {BrowserRouter,Route,Routes} from "react-router-dom"
 import Saldo from './Saldo';
 

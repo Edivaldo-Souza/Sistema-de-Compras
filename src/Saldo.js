@@ -3,6 +3,7 @@ import { Component } from "react"
 import { useState,useEffect} from "react"
 import axios from "axios"
 import { Link } from "react-router-dom"
+import { AcessToken } from "./token"
 
 class Produtos extends Component{
     render(){
@@ -32,6 +33,7 @@ function Saldo(){
             method:"get",
             headers:{
                 "Content-Type":"application/json; charset=UTF-8",
+                "Authorization":AcessToken.token
             },
             url:"http://localhost:8080/api/saldo",
         })
